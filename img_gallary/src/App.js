@@ -2,14 +2,6 @@ import {useState} from 'react'
 
 function App() {
   const [search, setSearch] = useState("")
-  const changeHandler = e =>{
-    setSearch(e.target.value);
-    console.log(e)
-  }
-  const submitHandler = e =>{
-    e.preventDefault();
-    console.log(search)
-  }
   return (
     <div>
       <center>
