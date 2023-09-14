@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
 
 function App() {
+  const [search, setSearch] = useState("")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          todo_list
-        </a>
-      </header>
+    <div>
+      <center>
+        <h2>Image Gallery</h2>
+        <form onSubmit={submitHandler}>
+          <input type="text" value={search} onChange={changeHandler}/> <br/> <br/>
+          <input type="submit" value="Click to Search"/>
+        </form>
+      </center> 
     </div>
-  );
+  );  
 }
 
 export default App;
